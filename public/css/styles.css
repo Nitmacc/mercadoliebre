@@ -2,12 +2,98 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-}
-.header_mliebre{
+    font-family: 'roboto', sans-serif;
+}   
+
+.main-header{
     background-color: #EAC926;
+    padding: 20px 20px 15px 20px;
 }
 
+.main-navbar-top{
+    padding: 10px 0;
+}
 
+.logo{
+    width: 200px;
+}
 
+.text-payment{
+    font-weight: normal;
+    text-align: center;
+}
 
+.mobile-button{
+    background-color: #03264C;
+    color: white;
+    display: block;
+    max-width: 55px;
+    padding: 7px 0;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 16px;
+    margin: auto;   
+}
+
+.main-navbar-bot{
+    display: none;
+}
+
+.main-navbar-bot ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-navbar-bot a{
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    padding: 5px 0;
+    font-size: 12px;
+}
+
+@media  (min-width: 768px) {
+    .main-navbar-top{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .text-payment{
+        max-width: 350px;
+        text-align: right;
+    }
+
+    .mobile-button{
+        display: none;
+    }
+
+    .main-navbar-bot{
+        display: flex;
+        justify-content: space-between
+    }
+
+    .main-navbar-bot ul{
+        display: flex;
+    }
+
+    .main-navbar-bot li{
+        margin: 0 5px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .main-navbar-top, .main-navbar-bot {
+        max-width: 1200px;
+        border: olive solid 5px;
+        margin: auto;
+    }
+
+    .main-navbar-bot li{
+        margin: 0 10px;
+    }
+
+    .main-navbar-bot a{
+        font-size: 16px;
+    }
+}
