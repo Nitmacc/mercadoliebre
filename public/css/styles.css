@@ -7,11 +7,11 @@
 
 .main-header{
     background-color: #EAC926;
-    padding: 20px 20px 15px 20px;
+    padding: 10px;
 }
 
 .main-navbar-top{
-    padding: 10px 0;
+    padding: 10px;
 }
 
 .logo{
@@ -19,7 +19,7 @@
 }
 
 .text-payment{
-    font-weight: normal;
+    font-weight: 300;
     text-align: center;
 }
 
@@ -50,16 +50,20 @@
     color: black;
     display: inline-block;
     padding: 5px 0;
-    font-size: 12px;
+    font-size: 16px;
 }
 
-@media  (min-width: 768px) {
+@media (min-width: 768px) {
     .main-navbar-top{
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        font-weight: 100;
+        
     }
 
     .text-payment{
+        display: block;
         max-width: 350px;
         text-align: right;
     }
@@ -69,12 +73,14 @@
     }
 
     .main-navbar-bot{
+        margin-top: 20px;
         display: flex;
-        justify-content: space-between
+        flex-direction: column;
     }
 
     .main-navbar-bot ul{
         display: flex;
+        padding: 0 0 10px 10px;
     }
 
     .main-navbar-bot li{
@@ -83,10 +89,25 @@
 }
 
 @media (min-width: 1200px) {
+    
     .main-navbar-top, .main-navbar-bot {
         max-width: 1200px;
-        border: olive solid 5px;
         margin: auto;
+    }
+
+    .main-navbar-bot{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .main-navbar-bot ul{
+        flex-direction: row;
+    }
+
+    .text-payment{
+        max-width: none;
+        font-size: 18px;
+        font-weight: 400;
     }
 
     .main-navbar-bot li{
@@ -94,6 +115,6 @@
     }
 
     .main-navbar-bot a{
-        font-size: 16px;
+        font-size: 18px;
     }
 }
