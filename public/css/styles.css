@@ -3,7 +3,14 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'roboto', sans-serif;
-}   
+}
+
+body {
+    background-color: #ebebeb;
+    margin:auto;
+}
+
+/* HEADER */
 
 .main-header{
     background-color: #EAC926;
@@ -12,13 +19,54 @@
 
 .main-navbar-top{
     padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo{
-    width: 200px;
+    width: 50%;
+    padding: 5px;
+}
+
+.searchbar{
+    position: relative;
+    padding: 5px;
+    width: 50%; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+
+.searchbar input{
+    position: relative;
+    padding: 10px;
+    border-radius: 3px;
+    width: 100%;
+    height: 250%;
+    flex: 1;
+    border: 0;
+    outline: none;
+    font-size: medium;
+}
+
+.searchbar button{
+    position: absolute;
+    background-color: white;
+    font-size: large;
+    width: 36px;
+    height: 36px;
+    border: 0;
+    cursor: pointer;
 }
 
 .text-payment{
+    margin-top: 10px;
+    font-size: 90%;
     font-weight: 300;
     text-align: center;
 }
@@ -53,18 +101,110 @@
     font-size: 16px;
 }
 
+/* IMG BANNER */
+
+.img-home-banner img{
+    width: 100%;
+}
+
+/* MAIN */
+
+.main-main{
+    margin: auto;
+    width:90%;
+    padding: 20px;
+}
+
+.main-main ul{
+    list-style: none;
+    background-color: white;
+}
+
+.titulares{
+    display: block;
+    color: #666;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: left;
+    padding-bottom: 20px;   
+}
+
+.productos-ultima-visita{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.productos-ultima-visita ul{
+    padding: 10px;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.productos-ultima-visita img{
+    padding: 10px;
+    width: 100%;
+    border-bottom: solid 1px #ebebeb;
+}
+
+.productos-ultima-visita div{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.productos-ultima-visita .precios{
+    padding: 5px;
+    display: flex;
+    color: #666;
+    font-size: 18px;
+}
+
+
+.productos-ultima-visita .descuentos{
+    padding: 5px;
+    display: flex;
+    color:#39b54a;
+    font-size: 16px;
+}
+
+.productos-ultima-visita i{
+    position: relative;
+    border: solid 2px;
+    padding: 10px;
+    border-radius: 50%;
+    left: 30px;
+    bottom: 30px;
+    color: #39b54a;
+    background-color: white;
+}
+
+/* TABLET */
+
 @media (min-width: 768px) {
+
+    /* HEADER */
+
     .main-navbar-top{
-        display: flex;
         justify-content: space-between;
-        align-items: center;
+        flex-wrap: unset;
         font-weight: 100;
-        
+    }
+
+    .logo{
+        width: 200px;
+    }
+
+    .searchbar{
+        width: 50%;
     }
 
     .text-payment{
-        display: block;
-        max-width: 350px;
+        margin:0;
+        font-size: 17px;
+        width: 250px;
         text-align: right;
     }
 
@@ -76,6 +216,7 @@
         margin-top: 20px;
         display: flex;
         flex-direction: column;
+        justify-content: center;
     }
 
     .main-navbar-bot ul{
@@ -86,6 +227,13 @@
     .main-navbar-bot li{
         margin: 0 5px;
     }
+
+    /* MAIN */
+
+    .productos-ultima-visita i{
+        left: 300px;
+    }
+
 }
 
 @media (min-width: 1200px) {
@@ -95,19 +243,29 @@
         margin: auto;
     }
 
+    .logo{
+        width: 25%;
+    }
+
+    .searchbar{
+        width: 550px;
+        padding: 0 10px;
+    }
+
+    .text-payment{
+        font-size: 18px;
+        font-weight: 400;
+        width: 400px;
+    }
+
     .main-navbar-bot{
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
     }
 
     .main-navbar-bot ul{
         flex-direction: row;
-    }
-
-    .text-payment{
-        max-width: none;
-        font-size: 18px;
-        font-weight: 400;
     }
 
     .main-navbar-bot li{
